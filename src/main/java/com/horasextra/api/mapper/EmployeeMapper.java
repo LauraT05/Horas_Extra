@@ -13,6 +13,8 @@ public final class EmployeeMapper {
                 employee.getId(),
                 employee.getFullName(),
                 employee.getEmail(),
+                employee.getDocumentType(),
+                employee.getDocumentNumber(),
                 employee.isActive()
         );
     }

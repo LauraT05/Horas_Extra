@@ -21,7 +21,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<Map<String, Object>> handleDataIntegrity(DataIntegrityViolationException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT)
-                .body(body(HttpStatus.CONFLICT, "El email ya esta registrado"));
+                .body(body(HttpStatus.CONFLICT, "El email o el numero de documento ya estan registrados"));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

@@ -35,6 +35,8 @@ public class EmployeeController {
         Employee employee = new Employee();
         employee.setFullName(dto.fullName());
         employee.setEmail(dto.email());
+        employee.setDocumentType(dto.documentType());
+        employee.setDocumentNumber(dto.documentNumber());
         employee.setActive(true);
 
         Employee saved = employeeRepository.save(employee);
