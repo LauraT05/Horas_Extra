@@ -2,6 +2,8 @@ package com.horasextra.api.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,6 +30,13 @@ public class Employee {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 10)
+    private DocumentType documentType;
+
+    @Column(nullable = false, unique = true)
+    private String documentNumber;
 
     @Column(nullable = false)
     private boolean active = true;
